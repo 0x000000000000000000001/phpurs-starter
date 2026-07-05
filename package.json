@@ -1,0 +1,12 @@
+{
+  "name": "phpurs-starter",
+  "version": "1.0.0",
+  "description": "Starter template for compiling PureScript to PHP",
+  "scripts": {
+    "build": "spago build",
+    "start": "spago build && php output/run.php"
+  },
+  "dependencies": {
+    "phpurs": "latest"
+  }
+}

@@ -1,0 +1,97 @@
+package:
+  name: phpurs-starter
+  dependencies:
+    - prelude
+    - effect
+    - console
+
+workspace:
+  packageSet:
+    registry: 77.7.0
+  extraPackages:
+    prelude:
+      git: "https://github.com/0x000000000000000000001/phpurs-prelude.git"
+      ref: "master"
+      dependencies: []
+    effect:
+      git: "https://github.com/0x000000000000000000001/phpurs-effect.git"
+      ref: "master"
+      dependencies:
+        - prelude
+    console:
+      git: "https://github.com/0x000000000000000000001/phpurs-console.git"
+      ref: "master"
+      dependencies:
+        - effect
+        - prelude
+    aff:
+      git: "https://github.com/0x000000000000000000001/phpurs-aff.git"
+      ref: "master"
+      dependencies:
+        - arrays
+        - bifunctors
+        - control
+        - datetime
+        - effect
+        - either
+        - exceptions
+        - foldable-traversable
+        - functions
+        - maybe
+        - newtype
+        - parallel
+        - prelude
+        - refs
+        - tailrec
+        - transformers
+        - unsafe-coerce
+    exceptions:
+      git: "https://github.com/0x000000000000000000001/phpurs-exceptions.git"
+      ref: "master"
+      dependencies:
+        - effect
+        - either
+        - maybe
+        - prelude
+    foldable-traversable:
+      git: "https://github.com/0x000000000000000000001/phpurs-foldable-traversable.git"
+      ref: "master"
+      dependencies:
+        - bifunctors
+        - control
+        - either
+        - functors
+        - identity
+        - maybe
+        - newtype
+        - orders
+        - prelude
+        - tuples
+    st:
+      git: "https://github.com/0x000000000000000000001/phpurs-st.git"
+      ref: "master"
+      dependencies:
+        - prelude
+        - tailrec
+        - unsafe-coerce
+    refs:
+      git: "https://github.com/0x000000000000000000001/phpurs-refs.git"
+      ref: "master"
+      dependencies:
+        - effect
+        - prelude
+    unsafe-coerce:
+      git: "https://github.com/0x000000000000000000001/phpurs-unsafe-coerce.git"
+      ref: "master"
+      dependencies: []
+    functions:
+      git: "https://github.com/0x000000000000000000001/phpurs-functions.git"
+      ref: "master"
+      dependencies:
+        - prelude
+    partial:
+      git: "https://github.com/0x000000000000000000001/phpurs-partial.git"
+      ref: "master"
+      dependencies: []
+  backend:
+    cmd: "phpurs"
