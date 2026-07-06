@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Starter template for compiling PureScript to PHP",
   "scripts": {
-    "build": "spago build",
-    "start": "spago build && php output/run.php"
+    "build": "spago build --backend-args \"--main Main\"",
+    "start": "npm run build && composer update && php -r \"require 'vendor/autoload.php'; require 'output/main.php';\""
   },
   "dependencies": {
     "phpurs": "latest"
