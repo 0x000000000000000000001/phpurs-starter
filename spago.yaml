@@ -412,6 +412,24 @@ workspace:
         - partial
         - spec
         - strings
+    variant:
+      git: "https://github.com/0x000000000000000000001/phpurs-variant.git"
+      ref: "master"
+      dependencies:
+        - assert
+        - control
+        - effect
+        - either
+        - enums
+        - foldable-traversable
+        - lists
+        - maybe
+        - partial
+        - prelude
+        - record
+        - tuples
+        - type-equality
+        - unsafe-coerce
 
   backend:
     cmd: "phpurs"
