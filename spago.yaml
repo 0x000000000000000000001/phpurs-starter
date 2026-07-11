@@ -415,4 +415,4 @@ workspace:
 
   backend:
     cmd: "phpurs"
-    args: ["--autoload-path", "vendor/autoload.php"]
+    args: ["--autoload-path", "path/to/vendor/autoload.php"]
