@@ -95,3 +95,4 @@ workspace:
       dependencies: []
   backend:
     cmd: "phpurs"
+    args: ["--autoload-path", "vendor/autoload.php"]
