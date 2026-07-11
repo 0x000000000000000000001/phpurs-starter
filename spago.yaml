@@ -9,24 +9,9 @@ workspace:
   packageSet:
     registry: 77.7.0
   extraPackages:
-    prelude:
-      git: "https://github.com/0x000000000000000000001/phpurs-prelude.git"
-      ref: "master"
-      dependencies: []
-    effect:
-      git: "https://github.com/0x000000000000000000001/phpurs-effect.git"
-      ref: "master"
-      dependencies:
-        - prelude
-    console:
-      git: "https://github.com/0x000000000000000000001/phpurs-console.git"
-      ref: "master"
-      dependencies:
-        - effect
-        - prelude
     aff:
       git: "https://github.com/0x000000000000000000001/phpurs-aff.git"
-      ref: "master"
+      ref: "main"
       dependencies:
         - arrays
         - bifunctors
@@ -45,6 +30,105 @@ workspace:
         - tailrec
         - transformers
         - unsafe-coerce
+    argonaut-core:
+      git: "https://github.com/0x000000000000000000001/phpurs-argonaut-core.git"
+      ref: "main"
+      dependencies:
+        - arrays
+        - control
+        - either
+        - foreign-object
+        - functions
+        - gen
+        - maybe
+        - nonempty
+        - prelude
+        - strings
+        - tailrec
+    arrays:
+      git: "https://github.com/0x000000000000000000001/phpurs-arrays.git"
+      ref: "master"
+      dependencies:
+        - bifunctors
+        - control
+        - foldable-traversable
+        - functions
+        - maybe
+        - nonempty
+        - partial
+        - prelude
+        - safe-coerce
+        - st
+        - tailrec
+        - tuples
+        - unfoldable
+        - unsafe-coerce
+    avar:
+      git: "https://github.com/0x000000000000000000001/phpurs-avar.git"
+      ref: "main"
+      dependencies:
+        - aff
+        - effect
+        - either
+        - exceptions
+        - functions
+        - maybe
+    catenable-lists:
+      git: "https://github.com/0x000000000000000000001/phpurs-catenable-lists.git"
+      ref: "main"
+      dependencies:
+        - control
+        - foldable-traversable
+        - lists
+        - maybe
+        - prelude
+        - tuples
+        - unfoldable
+    console:
+      git: "https://github.com/0x000000000000000000001/phpurs-console.git"
+      ref: "master"
+      dependencies:
+        - effect
+        - prelude
+    datetime:
+      git: "https://github.com/0x000000000000000000001/phpurs-datetime.git"
+      ref: "master"
+      dependencies:
+        - bifunctors
+        - control
+        - either
+        - enums
+        - foldable-traversable
+        - functions
+        - gen
+        - integers
+        - lists
+        - maybe
+        - newtype
+        - numbers
+        - ordered-collections
+        - partial
+        - prelude
+        - tuples
+    effect:
+      git: "https://github.com/0x000000000000000000001/phpurs-effect.git"
+      ref: "master"
+      dependencies:
+        - prelude
+    enums:
+      git: "https://github.com/0x000000000000000000001/phpurs-enums.git"
+      ref: "master"
+      dependencies:
+        - control
+        - either
+        - gen
+        - maybe
+        - newtype
+        - nonempty
+        - partial
+        - prelude
+        - tuples
+        - unfoldable
     exceptions:
       git: "https://github.com/0x000000000000000000001/phpurs-exceptions.git"
       ref: "master"
@@ -58,6 +142,7 @@ workspace:
       ref: "master"
       dependencies:
         - bifunctors
+        - const
         - control
         - either
         - functors
@@ -67,12 +152,174 @@ workspace:
         - orders
         - prelude
         - tuples
-    st:
-      git: "https://github.com/0x000000000000000000001/phpurs-st.git"
+    foreign-object:
+      git: "https://github.com/0x000000000000000000001/phpurs-foreign-object.git"
+      ref: "master"
+      dependencies:
+        - arrays
+        - foldable-traversable
+        - functions
+        - gen
+        - lists
+        - maybe
+        - prelude
+        - st
+        - tailrec
+        - tuples
+        - typelevel-prelude
+        - unfoldable
+    free:
+      git: "https://github.com/0x000000000000000000001/phpurs-free.git"
+      ref: "main"
+      dependencies:
+        - catenable-lists
+        - control
+        - either
+        - foldable-traversable
+        - maybe
+        - prelude
+        - tailrec
+        - transformers
+        - tuples
+        - unsafe-coerce
+    functions:
+      git: "https://github.com/0x000000000000000000001/phpurs-functions.git"
       ref: "master"
       dependencies:
         - prelude
-        - tailrec
+    integers:
+      git: "https://github.com/0x000000000000000000001/phpurs-integers.git"
+      ref: "master"
+      dependencies:
+        - maybe
+        - numbers
+        - prelude
+    js-promise:
+      git: "https://github.com/0x000000000000000000001/phpurs-js-promise.git"
+      ref: "master"
+      dependencies:
+        - console
+        - effect
+        - exceptions
+        - functions
+        - prelude
+    js-promise-aff:
+      git: "https://github.com/0x000000000000000000001/phpurs-js-promise-aff.git"
+      ref: "master"
+      dependencies:
+        - aff
+        - console
+        - effect
+        - foreign
+        - js-promise
+        - prelude
+    lazy:
+      git: "https://github.com/0x000000000000000000001/phpurs-lazy.git"
+      ref: "master"
+      dependencies:
+        - control
+        - foldable-traversable
+        - prelude
+    math:
+      git: "https://github.com/0x000000000000000000001/phpurs-math.git"
+      ref: "master"
+      dependencies:
+        []
+    node-fs:
+      git: "https://github.com/0x000000000000000000001/phpurs-node-fs.git"
+      ref: "master"
+      dependencies:
+        - datetime
+        - effect
+        - either
+        - enums
+        - exceptions
+        - functions
+        - integers
+        - js-date
+        - maybe
+        - node-buffer
+        - node-path
+        - node-streams
+        - nullable
+        - partial
+        - prelude
+        - strings
+        - unsafe-coerce
+    node-process:
+      git: "https://github.com/0x000000000000000000001/phpurs-node-process.git"
+      ref: "master"
+      dependencies:
+        - effect
+        - foreign-object
+        - foreign
+        - maybe
+        - node-event-emitter
+        - node-streams
+        - posix-types
+        - prelude
+        - unsafe-coerce
+    node-streams:
+      git: "https://github.com/0x000000000000000000001/phpurs-node-streams.git"
+      ref: "master"
+      dependencies:
+        - aff: ">=7.0.0 <9.0.0"
+        - arrays: ">=7.3.0 <8.0.0"
+        - effect: ">=4.0.0 <5.0.0"
+        - either: ">=6.0.0 <7.0.0"
+        - exceptions: ">=6.0.0 <7.0.0"
+        - maybe: ">=6.0.0 <7.0.0"
+        - node-buffer: ">=9.0.0 <10.0.0"
+        - node-event-emitter: ">=3.0.0 <4.0.0"
+        - nullable: ">=6.0.0 <7.0.0"
+        - prelude: ">=6.0.0 <7.0.0"
+        - refs: ">=6.0.0 <7.0.0"
+        - st: ">=6.2.0 <7.0.0"
+        - tailrec: ">=6.1.0 <7.0.0"
+        - unsafe-coerce: ">=6.0.0 <7.0.0"
+    now:
+      git: "https://github.com/0x000000000000000000001/phpurs-now.git"
+      ref: "main"
+      dependencies:
+        - datetime
+        - effect
+    nullable:
+      git: "https://github.com/0x000000000000000000001/phpurs-nullable.git"
+      ref: "main"
+      dependencies:
+        - assert
+        - effect
+        - functions
+        - maybe
+        - prelude
+    numbers:
+      git: "https://github.com/0x000000000000000000001/phpurs-numbers.git"
+      ref: "master"
+      dependencies:
+        - functions
+        - maybe
+    partial:
+      git: "https://github.com/0x000000000000000000001/phpurs-partial.git"
+      ref: "master"
+      dependencies:
+        []
+    prelude:
+      git: "https://github.com/0x000000000000000000001/phpurs-prelude.git"
+      ref: "master"
+      dependencies:
+        []
+    random:
+      git: "https://github.com/0x000000000000000000001/phpurs-random.git"
+      ref: "master"
+      dependencies:
+        - effect
+        - integers
+    record:
+      git: "https://github.com/0x000000000000000000001/phpurs-record.git"
+      ref: "master"
+      dependencies:
+        - functions
+        - prelude
         - unsafe-coerce
     refs:
       git: "https://github.com/0x000000000000000000001/phpurs-refs.git"
@@ -80,19 +327,92 @@ workspace:
       dependencies:
         - effect
         - prelude
+    spec:
+      git: "https://github.com/0x000000000000000000001/phpurs-spec.git"
+      ref: "master"
+      dependencies:
+        - aff: ">=8.0.0 <9.0.0"
+        - ansi: ">=7.0.0 <8.0.0"
+        - arrays: ">=7.3.0 <8.0.0"
+        - avar: ">=5.0.0 <6.0.0"
+        - bifunctors: ">=6.0.0 <7.0.0"
+        - control: ">=6.0.0 <7.0.0"
+        - datetime: ">=6.1.0 <7.0.0"
+        - effect: ">=4.0.0 <5.0.0"
+        - either: ">=6.1.0 <7.0.0"
+        - exceptions: ">=6.1.0 <7.0.0"
+        - foldable-traversable: ">=6.0.0 <7.0.0"
+        - fork: ">=6.0.0 <7.0.0"
+        - identity: ">=6.0.0 <7.0.0"
+        - integers: ">=6.0.0 <7.0.0"
+        - lists: ">=7.0.0 <8.0.0"
+        - maybe: ">=6.0.0 <7.0.0"
+        - newtype: ">=5.0.0 <6.0.0"
+        - now: ">=6.0.0 <7.0.0"
+        - ordered-collections: ">=3.2.0 <4.0.0"
+        - parallel: ">=7.0.0 <8.0.0"
+        - pipes: ">=8.0.0 <9.0.0"
+        - prelude: ">=6.0.1 <7.0.0"
+        - refs: ">=6.0.0 <7.0.0"
+        - strings: ">=6.0.1 <7.0.0"
+        - tailrec: ">=6.1.0 <7.0.0"
+        - transformers: ">=6.1.0 <7.0.0"
+        - tuples: ">=7.0.0 <8.0.0"
+        - debug
+    st:
+      git: "https://github.com/0x000000000000000000001/phpurs-st.git"
+      ref: "master"
+      dependencies:
+        - partial
+        - prelude
+        - tailrec
+        - unsafe-coerce
+    strings:
+      git: "https://github.com/0x000000000000000000001/phpurs-strings.git"
+      ref: "master"
+      dependencies:
+        - arrays
+        - control
+        - either
+        - enums
+        - foldable-traversable
+        - gen
+        - integers
+        - maybe
+        - newtype
+        - nonempty
+        - partial
+        - prelude
+        - tailrec
+        - tuples
+        - unfoldable
+        - unsafe-coerce
+    unfoldable:
+      git: "https://github.com/0x000000000000000000001/phpurs-unfoldable.git"
+      ref: "master"
+      dependencies:
+        - foldable-traversable
+        - maybe
+        - partial
+        - prelude
+        - tuples
     unsafe-coerce:
       git: "https://github.com/0x000000000000000000001/phpurs-unsafe-coerce.git"
       ref: "master"
-      dependencies: []
-    functions:
-      git: "https://github.com/0x000000000000000000001/phpurs-functions.git"
-      ref: "master"
+      dependencies:
+        []
+    uuid:
+      git: "https://github.com/0x000000000000000000001/phpurs-uuid.git"
+      ref: "main"
       dependencies:
         - prelude
-    partial:
-      git: "https://github.com/0x000000000000000000001/phpurs-partial.git"
-      ref: "master"
-      dependencies: []
+        - aff
+        - effect
+        - maybe
+        - partial
+        - spec
+        - strings
+
   backend:
     cmd: "phpurs"
     args: ["--autoload-path", "vendor/autoload.php"]
