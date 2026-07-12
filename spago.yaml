@@ -246,6 +246,11 @@ workspace:
         - prelude
         - strings
         - unsafe-coerce
+    node-path:
+      git: "https://github.com/0x000000000000000000001/phpurs-node-path.git"
+      ref: "master"
+      dependencies:
+        - effect
     node-process:
       git: "https://github.com/0x000000000000000000001/phpurs-node-process.git"
       ref: "master"
@@ -327,6 +332,24 @@ workspace:
       dependencies:
         - effect
         - prelude
+    run:
+      git: "https://github.com/0x000000000000000000001/phpurs-run.git"
+      ref: "master"
+      dependencies:
+        - aff
+        - effect
+        - either
+        - free
+        - maybe
+        - newtype
+        - prelude
+        - profunctor
+        - tailrec
+        - tuples
+        - type-equality
+        - typelevel-prelude
+        - unsafe-coerce
+        - variant
     spec:
       git: "https://github.com/0x000000000000000000001/phpurs-spec.git"
       ref: "master"
