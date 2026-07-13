@@ -225,6 +225,14 @@ workspace:
       ref: "master"
       dependencies:
         []
+    node-event-emitter:
+      git: "https://github.com/0x000000000000000000001/phpurs-node-event-emitter.git"
+      ref: "master"
+      dependencies:
+        - effect
+        - maybe
+        - options
+        - prelude
     node-fs:
       git: "https://github.com/0x000000000000000000001/phpurs-node-fs.git"
       ref: "master"
@@ -246,6 +254,40 @@ workspace:
         - prelude
         - strings
         - unsafe-coerce
+    node-http:
+      git: "https://github.com/0x000000000000000000001/phpurs-node-http.git"
+      ref: "master"
+      dependencies:
+        - arraybuffer-types
+        - contravariant
+        - effect
+        - foreign
+        - foreign-object
+        - maybe
+        - node-buffer
+        - node-net
+        - node-streams
+        - node-url
+        - nullable
+        - options
+        - prelude
+        - unsafe-coerce
+    node-net:
+      git: "https://github.com/0x000000000000000000001/phpurs-node-net.git"
+      ref: "master"
+      dependencies:
+        - effect
+        - either
+        - exceptions
+        - foreign
+        - maybe
+        - node-buffer
+        - node-event-emitter
+        - node-fs
+        - node-streams
+        - nullable
+        - options
+        - prelude
     node-path:
       git: "https://github.com/0x000000000000000000001/phpurs-node-path.git"
       ref: "master"
