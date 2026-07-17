@@ -9,6 +9,41 @@ workspace:
   packageSet:
     registry: 77.7.0
   extraPackages:
+    yoga-json:
+      git: "https://github.com/0x000000000000000000001/phpurs-yoga-json.git"
+      ref: "main"
+      dependencies:
+        - bifunctors
+        - control
+        - either
+        - exceptions
+        - foldable-traversable
+        - foreign
+        - foreign-object
+        - lists
+        - maybe
+        - nullable
+        - prelude
+        - record
+        - typelevel-prelude
+        - variant
+        - js-bigints
+        - js-date
+        - yoga-tree
+    foreign:
+      git: "https://github.com/0x000000000000000000001/phpurs-foreign.git"
+      ref: "master"
+      dependencies:
+        - either
+        - foldable-traversable
+        - functions
+        - identity
+        - integers
+        - lists
+        - maybe
+        - prelude
+        - strings
+        - transformers
     aff:
       git: "https://github.com/0x000000000000000000001/phpurs-aff.git"
       ref: "main"
