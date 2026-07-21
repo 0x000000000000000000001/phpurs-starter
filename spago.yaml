@@ -248,6 +248,15 @@ workspace:
         - foreign
         - js-promise
         - prelude
+    js-uri:
+      git: "https://github.com/0x000000000000000000001/phpurs-js-uri.git"
+      ref: "v3.0.0-php"
+      dependencies:
+        - assert
+        - effect
+        - functions
+        - maybe
+        - prelude
     lazy:
       git: "https://github.com/0x000000000000000000001/phpurs-lazy.git"
       ref: "master"
