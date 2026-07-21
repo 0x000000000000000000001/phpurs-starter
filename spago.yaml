@@ -250,7 +250,7 @@ workspace:
         - prelude
     js-uri:
       git: "https://github.com/0x000000000000000000001/phpurs-js-uri.git"
-      ref: "v3.0.0-php"
+      ref: "main"
       dependencies:
         - assert
         - effect
