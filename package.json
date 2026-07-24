@@ -8,5 +8,8 @@
   },
   "dependencies": {
     "phpurs": "latest"
+  },
+  "devDependencies": {
+    "purescript": "github:0x000000000000000000001/purescript-npm"
   }
 }
