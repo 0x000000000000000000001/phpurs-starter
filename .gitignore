@@ -3,3 +3,5 @@
 /node_modules/
 spago.lock
 .DS_Store
+.spago
+output
