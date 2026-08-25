@@ -1,8 +1,10 @@
-/output/
+output/
+output.bak/
 /.spago/
 /node_modules/
 spago.lock
 .DS_Store
 .spago
 output
+output.bak
 .psc-ide-port
